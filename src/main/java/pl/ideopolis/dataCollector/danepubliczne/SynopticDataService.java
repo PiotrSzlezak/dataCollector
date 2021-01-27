@@ -40,11 +40,11 @@ public class SynopticDataService {
         List<SynopticData> synopticDataList = new ArrayList<>();
         for (SynopticDataDTO dto : synopticDataDTOs) {
             Optional<SynopticData> optionalSynopticData = findMatchingData(dto);
-            if (optionalSynopticData.isEmpty()) {
+            if (optionalSynopticData.isPresent()) {
+                System.out.println("Entry already exists in database");
+            } else {
                 synopticDataList.add(new SynopticData(dto));
                 numberOfNewEntries++;
-            } else {
-                System.out.println("Entry already exists in database");
             }
         }
         return synopticDataList;
