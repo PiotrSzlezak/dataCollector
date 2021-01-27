@@ -14,7 +14,10 @@
 	<name>dataCollector</name>
 	<description>Data collector module of Energy data service.</description>
 	<properties>
-		<java.version>11</java.version>
+		<source>11</source>
+		<target>11</target>
+		<testSource>11</testSource>
+		<testTarget>11</testTarget>
 	</properties>
 	<dependencies>
 		<dependency>
