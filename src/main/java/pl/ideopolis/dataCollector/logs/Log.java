@@ -14,7 +14,7 @@ public class Log {
     private Long id;
 
     @Column(name = "date")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date date;
 
