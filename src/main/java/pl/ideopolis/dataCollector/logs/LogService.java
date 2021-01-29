@@ -19,8 +19,13 @@ public class LogService {
         logsRepository.save(log);
     }
 
-    public List<Log> getLogs(){
-        return logsRepository.findAll();
+    public String getLogs(){
+        final List<Log> logs = logsRepository.findAll();
+        StringBuilder logsStringBuilder = new StringBuilder();
+        for (Log log: logs) {
+            logsStringBuilder.append(log);
+        }
+        return logsStringBuilder.toString();
     }
 
 }

@@ -19,22 +19,22 @@ public class LogController {
     }
 
     @GetMapping("/getLogs")
-    public List<Log> getLogs() {
+    public String getLogs() {
         return logService.getLogs();
     }
 
-    @GetMapping("/getLastLog")
-    public Log getLastLog() {
-        final List<Log> logs = logService.getLogs();
-        final int size = logs.size();
-        return logs.get(size-1);
-    }
-
-    @GetMapping("/getLastLogAsString")
-    public String getLastLogAsString() {
-        final List<Log> logs = logService.getLogs();
-        final int size = logs.size();
-        return logs.get(size-1).toString();
-    }
+//    @GetMapping("/getLastLog")
+//    public Log getLastLog() {
+//        final List<Log> logs = logService.getLogs();
+//        final int size = logs.size();
+//        return logs.get(size-1);
+//    }
+//
+//    @GetMapping("/getLastLogAsString")
+//    public String getLastLogAsString() {
+//        final List<Log> logs = logService.getLogs();
+//        final int size = logs.size();
+//        return logs.get(size-1).toString();
+//    }
 
 }

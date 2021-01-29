@@ -37,10 +37,10 @@ public class Log {
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        sb.append("id: ").append(id);
-        sb.append("date: ").append(date);
-        sb.append("data source: ").append(dataSource.toString());
-        sb.append("number of new entries: ").append(numberOfNewEntries);
+        sb.append("id: ").append(id).append("\n");
+        sb.append("date: ").append(date).append("\n");
+        sb.append("data source: ").append(dataSource.toString()).append("\n");
+        sb.append("number of new entries: ").append(numberOfNewEntries).append("\n");
         return sb.toString();
     }
 }
