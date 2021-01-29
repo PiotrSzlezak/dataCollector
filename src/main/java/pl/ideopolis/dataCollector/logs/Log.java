@@ -33,4 +33,14 @@ public class Log {
         this.dataSource = dataSource;
         this.numberOfNewEntries = numberOfNewEntries;
     }
+
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("id: ").append(id);
+        sb.append("date: ").append(date);
+        sb.append("data source: ").append(dataSource.toString());
+        sb.append("number of new entries: ").append(numberOfNewEntries);
+        return sb.toString();
+    }
 }
