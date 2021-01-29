@@ -22,7 +22,7 @@ public class SynopticDataRestController {
     @GetMapping("/synopticdata")
     public ResponseEntity<String> getSynopticData() {
         synopticDataService.saveAllSynopticData(dataRequest());
-        return new ResponseEntity<>("Data retrieved successfully.", HttpStatus.OK); /// TODO: 26.01.2021
+        return new ResponseEntity<>("Data retrieved successfully.", HttpStatus.OK);
     }
 
     public String dataRequest(){

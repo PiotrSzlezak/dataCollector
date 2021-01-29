@@ -3,6 +3,8 @@ package pl.ideopolis.dataCollector.logs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class LogService {
 
@@ -15,6 +17,10 @@ public class LogService {
 
     public void saveLog(Log log){
         logsRepository.save(log);
+    }
+
+    public List<Log> getLogs(){
+        return logsRepository.findAll();
     }
 
 }
